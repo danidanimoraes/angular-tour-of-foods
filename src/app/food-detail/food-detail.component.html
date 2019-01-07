@@ -1,0 +1,9 @@
+<div *ngIf="food">
+  <h2>{{ food.name | uppercase }} Details</h2>
+  <div><span>Id: </span>{{ food.id }}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="food.name" placeholder="name"> <!-- Two-way data binding -->
+    </label>
+  </div>
+</div>

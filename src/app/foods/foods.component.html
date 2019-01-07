@@ -1,0 +1,15 @@
+
+
+<h2>Foods that I like</h2>
+
+<ul class="foods">
+  <li
+    *ngFor="let food of foods"
+    (click)="onSelect(food)"
+    [class.selected]="selectedFood === food"> <!-- Class binding to change CSS conditionally -->
+
+    <span class="badge">{{food.id}}</span> {{food.name}}
+  </li>
+</ul>
+
+

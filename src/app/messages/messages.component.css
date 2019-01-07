@@ -1,0 +1,16 @@
+button.clear
+{
+    font-family: Arial;
+    background-color: rgb(157, 184, 235);
+    color:  rgb(254, 254, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+button.clear:hover
+{
+    background-color: rgb(87, 138, 231);
+}
