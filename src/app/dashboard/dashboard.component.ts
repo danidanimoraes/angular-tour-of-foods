@@ -23,8 +23,11 @@ export class DashboardComponent implements OnInit {
     this.foodService
       .getFoods()
       .subscribe((foods: Food[]) => 
-        this.foods = foods.sort((food1, food2) => food1.points < food2.points ? 0 : -1)
-          .slice(1,5)
+        this.foods = foods.sort((food1, food2) => 
+          food1.points <= food2.points ? 0
+          : -1
+          )
+          .slice(0,4)
         );
   }
 }

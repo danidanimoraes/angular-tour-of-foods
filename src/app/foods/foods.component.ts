@@ -11,7 +11,6 @@ import { FoodService } from '../food.service';
 export class FoodsComponent implements OnInit {
 
   public foods: Food[];
-  public selectedFood: Food;
 
   constructor(
     private foodService: FoodService
@@ -35,10 +34,5 @@ export class FoodsComponent implements OnInit {
     this.foodService
       .getFoods()
       .subscribe((foods: Food[]) => this.foods = foods);
-  }
-
-  public onSelect(food: Food): void
-  {
-    this.selectedFood = food;
   }
 }

@@ -17,4 +17,10 @@ export class FoodService {
     this.messageService.addMessage('FoodService: fecthed foods.');
     return Observable.of(FOODS);
   }
+
+  public getFood(id: number): Observable<Food>
+  {
+    this.messageService.addMessage(`FoodService: fecthed food ${id}.`);
+    return Observable.of(FOODS.find((food: Food) => food.id === id));
+  }
 }
