@@ -1,13 +1,42 @@
 
+<div>
+<div>
+  <h3>INSERT NEW FOOD</h3>
+  <label>Name:
+      <input class="name" #foodName>
+  </label>
+</div>
+<div>
+  <label>Description:
+      <textarea rows="4" cols="50" class="desc" #foodDesc></textarea>
+  </label>
+</div>
+<div>
+  <label>Points:
+      <input class="points" type="number" min="0" max="10" #foodPoints>
+  </label>
+</div>
+  <button (click)="add(foodName.value, foodDesc.value, foodPoints.value);
+    foodName.value='';
+    foodDesc.value='';
+    foodPoints.value=''">
+    Add New Food
+  </button>
+</div>
 
 <h2>Foods that I like</h2>
 
 <ul class="foods">
   <li *ngFor="let food of foods">
+    <div>
     <a routerLink="/food/{{food.id}}">
-      <span class="badge">{{food.id}}</span> {{food.name}}
+      <span class="badge">{{food.id}}</span> {{food.name}} {{food.points}}/10
     </a>
+    <button class="delete" (click)="delete(food)">Delete</button>
+  </div>
   </li>
 </ul>
+
+
 
 

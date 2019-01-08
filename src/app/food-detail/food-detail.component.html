@@ -3,7 +3,15 @@
   <div><span>Id: </span>{{ food.id }}</div>
   <div>
     <label>Name:
-      <input [(ngModel)]="food.name" placeholder="name"> <!-- Two-way data binding -->
+      <input class="name" [(ngModel)]="food.name" placeholder="name"> <!-- Two-way data binding -->
     </label>
   </div>
+  <div>
+      <label>Details:
+        <textarea class="desc" rows="4" cols="50" [(ngModel)]="food.description"></textarea> <!-- Two-way data binding -->
+      </label>
+    </div>
 </div>
+
+<button (click)="goBack()">Go Back!</button>
+<button (click)="save()">Save modifications</button>

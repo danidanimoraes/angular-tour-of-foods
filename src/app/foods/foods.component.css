@@ -16,6 +16,7 @@
     margin: .5em;
     padding: .3em 0;
     height: 1.6em;
+    width: 20em;
     border-radius: 4px;
 }
 
@@ -39,4 +40,17 @@
 {
     background-color: rgb(59, 58, 54) !important;
     color: rgb(245, 239, 239) !important;
+}
+
+button.delete
+{
+    width: 5em;
+    height: 30px;
+    background-color: rgb(223, 16, 16);
+    color: rgb(245, 239, 239);
+    border-radius: 9px 9px 9px 9px;
+    cursor: pointer;
+    font-family: Cambria, sans-serif;
+    float: right;
+    border: none;
 }

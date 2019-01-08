@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>SEARCH FOOD</h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)">
+
+  <ul class="result">
+    <!-- $= convention that indicates food$ is an observable, not an array -->
+    <!-- async subscribes to an observable automatically so it isn't needed in the component -->
+    <li *ngFor="let food of foods$ | async">
+      <a routerLink="/food/{{food.id}}">{{food.name}} {{food.points}}/10</a>
+    </li>
+  </ul>
+</div>
